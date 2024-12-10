@@ -1,0 +1,23 @@
+class _LanguageSelectorState extends State<LanguageSelector> {
+  final List<String> languages = ['English', 'Filipino', 'Waray', 'Spanish'];
+  String selectedLanguage = 'English'; // Default language
+  String greetingMessage = 'Hello! How can I help you?';
+
+  void updateGreetingMessage(String language) {
+    switch (language) {
+      case 'English':
+        greetingMessage = 'Hello! How can I help you?';
+        break;
+      case 'Filipino':
+        greetingMessage = 'Kamusta! Paano kita matutulungan?';
+        break;
+      case 'Waray':
+        greetingMessage = 'Maupay! Ano it imo kinahanglan?';
+        break;
+      case 'Spanish':
+        greetingMessage = '¡Hola! ¿Cómo puedo ayudarte?';
+        break;
+      default:
+        greetingMessage = 'Hello! How can I help you?';
+    }
+  }
